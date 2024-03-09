@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pose Estimation with MoveNet (Thunder)</title>
+  <!-- Require the peer dependencies of pose-detection. -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script> -->
+  <!-- <script src="tfjs-core.js"></script> -->
+  <script src="tfjs-core_prettier.js"></script>
+  
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script> -->
+  <script src="tfjs-converter_pretty.js"></script>
+
+  <!-- You must explicitly require a TF.js backend if you're not using the TF.js union bundle. -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script> -->
+  <script src="tfjs-backend-webgl.js"></script>
+  <!-- Alternatively you can use the WASM backend: <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm/dist/tf-backend-wasm.js"></script> -->
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script> -->
+  <!-- <script src="pose-detection.js"></script> -->
+  <script src="pose-detection_pretty_local.js"></script>
+
+  <script src="tfjs-layers_pretty.js"></script>
+  
+  
+</head>
+
+<body>
+  <h1>Pose Estimation with MoveNet (Thunder)</h1>
+
+  <label for="labels">Labels</label>
+  <input id="labels" type="checkbox" checked ></input>
+  <label for="score-treshold">Score teshold</label>
+  <input id="score-treshold" type="number" value="0.4" step="0.01"></input>
+  <input id="outputindex" type="number" step="1"></input>
+  <br>
+  <video id="videoElement" width="640" height="480" autoplay></video>
+  <canvas id="outputCanvas" width="640" height="480"></canvas>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
